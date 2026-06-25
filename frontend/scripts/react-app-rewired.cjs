@@ -11,6 +11,7 @@ const nodeOptions = [existingNodeOptions, opensslFlag, memoryFlag]
 const result = spawnSync(`react-app-rewired ${command}`, {
   env: {
     ...process.env,
+    CI: "false",
     NODE_OPTIONS: nodeOptions,
   },
   shell: true,
