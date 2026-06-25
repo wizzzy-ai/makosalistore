@@ -38,8 +38,8 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "set NODE_OPTIONS=--openssl-legacy-provider --max_old_space_size=4096 && react-app-rewired start",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider --max_old_space_size=4096 && react-app-rewired build",
+    "start": "node scripts/react-app-rewired.cjs start",
+    "build": "node scripts/react-app-rewired.cjs build",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
