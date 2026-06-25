@@ -112,7 +112,7 @@
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
     "client": "cd frontend && npm run start",
-    "build": "npm run build --prefix frontend",
+    "build": "npm run build --prefix frontend && node scripts/copy-frontend-build.cjs",
     "dev": "concurrently \"node node_modules/nodemon/bin/nodemon.js backend/server.js\" \"cd frontend && set NODE_OPTIONS=--openssl-legacy-provider && node node_modules/react-scripts/bin/react-scripts.js start\"",
     "test": "set NODE_ENV=test&& set SKIP_DB=1&& node --test backend/tests/smoke.test.js",
     "data:import": "node backend/seeder.js",
