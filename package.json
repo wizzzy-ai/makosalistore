@@ -116,8 +116,8 @@
     "test": "set NODE_ENV=test&& set SKIP_DB=1&& node --test backend/tests/smoke.test.js",
     "data:import": "node backend/seeder.js",
     "data:destroy": "node backend/seeder.js -d",
-    "postinstall": "npm install --prefix frontend && node scripts/patch-postcss-safe-parser.cjs",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "postinstall": "npm install --legacy-peer-deps --prefix frontend && node scripts/patch-postcss-safe-parser.cjs",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
   },
   "author": " ABDESSAMAD BOURHJOUL & SOUHAIL OUABOU & SOUFIAN ZAAM",
   "license": "MIT",
