@@ -1,0 +1,124 @@
+.order-details-page {
+  margin: 92px 0 32px;
+  background:
+    linear-gradient(rgba(247, 248, 251, 0.92), rgba(247, 248, 251, 0.92)),
+    url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1600&q=80")
+      no-repeat center top / cover;
+}
+
+.order-details__link {
+  color: #0b0b0b;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.order-details__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.order-details__pill--success {
+  border-color: rgba(34, 197, 94, 0.35);
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.order-details__pill--muted {
+  border-color: rgba(15, 23, 42, 0.14);
+  background: rgba(15, 23, 42, 0.035);
+  color: rgba(15, 23, 42, 0.72);
+}
+
+.order-details__updates {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.order-details__updateTitle {
+  font-weight: 900;
+  color: #0b0b0b;
+}
+
+.order-details__updateMeta {
+  margin-top: 4px;
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.order-details__adminForm {
+  margin-top: 12px;
+}
+
+.order-details__adminGrid {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.order-details__input {
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  font-weight: 700;
+}
+
+.order-details__input:focus {
+  border-color: rgba(37, 99, 235, 0.55);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+.order-details__error {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  background: rgba(220, 38, 38, 0.06);
+  color: #7f1d1d;
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.payment-success {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-success lottie-player {
+  width: 56px;
+  height: 56px;
+}
+
+.payment-success__text {
+  font-weight: 800;
+  color: #0b0b0b;
+}
+
+.order-details__orderId {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  font-weight: 900;
+  word-break: break-word;
+  color: rgba(15, 23, 42, 0.92);
+}
+
+.order-details__payArea {
+  margin-top: 10px;
+}
+
+.paypalbuttons {
+  margin-top: 10px;
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .order-details-page {
+    margin: 92px 0 24px;
+  }
+}

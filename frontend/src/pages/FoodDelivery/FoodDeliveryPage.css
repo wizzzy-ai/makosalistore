@@ -1,0 +1,435 @@
+.foodDeliveryPage {
+  position: relative;
+  top: 70px;
+  min-height: 100vh;
+  padding: 34px 5vw 72px;
+  color: #050505;
+  background: #ffffff;
+}
+
+.foodDeliveryHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 28px;
+  align-items: stretch;
+  margin-bottom: 24px;
+  padding: 34px;
+  border: 1px solid #101010;
+  background:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0) 40%),
+    #ffffff;
+}
+
+.foodDeliveryHeroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 760px;
+}
+
+.foodDeliveryEyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 5px 9px;
+  border: 1px solid #101010;
+  color: #ffffff;
+  background: #050505;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.foodDeliveryHeader h1 {
+  margin: 0;
+  color: #050505;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.foodDeliveryHeader p {
+  max-width: 570px;
+  margin: 12px 0 0;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.foodDeliveryStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 120px));
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.foodDeliveryStats div {
+  padding: 14px 16px;
+  border: 1px solid #151515;
+  background: #ffffff;
+}
+
+.foodDeliveryStats strong,
+.foodDeliveryStats span {
+  display: block;
+}
+
+.foodDeliveryStats strong {
+  color: #050505;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.foodDeliveryStats span {
+  margin-top: 6px;
+  color: #555555;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.foodDeliveryFilters {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 7px;
+  min-width: 0;
+  padding: 16px 18px 18px;
+  border: 1px solid #101010;
+  background: #ffffff;
+}
+
+.foodDeliveryCategoryLottie {
+  align-self: center;
+  width: min(100%, 160px);
+  height: 92px;
+  margin: 0 auto 2px;
+}
+
+.foodDeliveryFilters label,
+.foodDeliveryFilterBlock label,
+.foodDeliveryInlineLabel {
+  display: block;
+  margin-bottom: 7px;
+  color: #4b4b4b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.foodDeliveryFilters label {
+  color: #050505;
+}
+
+.foodDeliveryFilters select,
+.foodDeliveryFilterBlock select {
+  width: 100%;
+  height: 46px;
+  border: 1px solid #101010;
+  border-radius: 0;
+  padding: 0 13px;
+  color: #050505;
+  background: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.foodDeliveryFilters select:focus,
+.foodDeliveryFilterBlock select:focus {
+  border-color: #050505;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.foodDeliverySectionFilters {
+  border: 1px solid #101010;
+  background: #ffffff;
+  padding: 22px;
+  margin: 0 0 28px;
+}
+
+.foodDeliverySectionFiltersHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #101010;
+  margin-bottom: 18px;
+}
+
+.foodDeliverySectionFiltersHeader h2 {
+  margin: 0;
+  color: #050505;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.foodDeliveryClearFiltersBtn {
+  min-width: 86px;
+  border: 1px solid #050505;
+  border-radius: 0;
+  padding: 11px 16px;
+  color: #ffffff;
+  background: #050505;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.foodDeliveryClearFiltersBtn:not(:disabled):hover {
+  color: #050505;
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+
+.foodDeliveryClearFiltersBtn:disabled {
+  color: #8c8c8c;
+  background: #f2f2f2;
+  cursor: not-allowed;
+}
+
+.foodDeliverySectionFiltersGrid {
+  display: grid;
+  grid-template-columns: minmax(190px, 240px) minmax(230px, 280px) minmax(260px, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.foodDeliveryFilterBlock {
+  min-width: 0;
+}
+
+.foodDeliveryQuickToggles {
+  display: grid;
+  gap: 10px;
+}
+
+.foodDeliveryToggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 11px 13px;
+  border: 1px solid #101010;
+  background: #ffffff;
+  color: #050505;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.foodDeliveryToggle input {
+  width: 16px;
+  height: 16px;
+  accent-color: #050505;
+}
+
+.foodDeliveryChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.foodDeliveryChip {
+  border: 1px solid #101010;
+  background: #ffffff;
+  color: #050505;
+  border-radius: 0;
+  padding: 10px 13px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.foodDeliveryChip:hover,
+.foodDeliveryChipActive {
+  background: #050505;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.foodDeliveryMuted {
+  color: #666666;
+  font-size: 13px;
+  padding: 12px 0;
+}
+
+.foodDeliveryProducts.cardsProduct {
+  width: 100%;
+  margin: 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  justify-content: center;
+  gap: 34px;
+}
+
+.foodDeliveryPage .cardProduct {
+  height: auto;
+  min-height: 520px;
+  border-radius: 0;
+  border-color: #111111;
+  box-shadow: 8px 8px 0 #050505;
+}
+
+.foodDeliveryPage .cardProduct:hover {
+  transform: translate(-3px, -7px);
+  box-shadow: 12px 12px 0 #050505;
+}
+
+.foodDeliveryPage .imgDiv {
+  border-radius: 0;
+  border-bottom: 1px solid #111111;
+}
+
+.foodDeliveryPage .bottomcard {
+  height: auto;
+  min-height: 170px;
+}
+
+.foodDeliveryPage .QuickView {
+  border-radius: 0;
+  border: 1px solid #ffffff;
+  box-shadow: none;
+}
+
+.foodDeliveryPage .iconFavButton {
+  border-color: #111111;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 #050505;
+}
+
+.foodDeliveryPage .foodDeliveryInfo {
+  border-top-color: #111111;
+}
+
+.foodDeliveryPage .restaurantName {
+  color: #050505;
+}
+
+.foodDeliveryPage .prepTime,
+.foodDeliveryPage .deliveryFee {
+  color: #333333;
+  font-weight: 600;
+}
+
+.foodDeliveryPage .timeIcon,
+.foodDeliveryPage .deliveryIcon {
+  min-width: 58px;
+  color: #050505;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.foodDeliveryPage .dietaryBadge {
+  border: 1px solid #111111;
+  border-radius: 0;
+  color: #050505;
+  background: #ffffff;
+}
+
+.foodDeliveryLoading,
+.foodDeliveryEmpty,
+.foodDeliveryError {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  border: 1px solid #101010;
+  background: #ffffff;
+  color: #050505;
+  text-align: center;
+}
+
+.foodDeliveryEmpty h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.foodDeliveryEmpty p {
+  margin: 0;
+  color: #555555;
+  font-size: 14px;
+}
+
+.foodDeliveryError {
+  color: #050505;
+  font-weight: 700;
+}
+
+@media (max-width: 950px) {
+  .foodDeliveryHeader {
+    grid-template-columns: 1fr;
+    padding: 26px;
+  }
+
+  .foodDeliveryFilters {
+    padding: 14px 16px 16px;
+  }
+
+  .foodDeliveryCategoryLottie {
+    height: 86px;
+  }
+
+  .foodDeliverySectionFiltersGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .foodDeliveryDietaryBlock {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .foodDeliveryPage {
+    padding: 24px 16px 56px;
+  }
+
+  .foodDeliveryHeader {
+    padding: 22px;
+  }
+
+  .foodDeliveryCategoryLottie {
+    width: min(100%, 150px);
+    height: 78px;
+  }
+
+  .foodDeliveryHeader h1 {
+    font-size: 34px;
+  }
+
+  .foodDeliveryHeader p {
+    font-size: 14px;
+  }
+
+  .foodDeliveryStats {
+    grid-template-columns: 1fr;
+  }
+
+  .foodDeliverySectionFiltersHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .foodDeliveryClearFiltersBtn {
+    width: 100%;
+  }
+
+  .foodDeliverySectionFiltersGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .foodDeliveryDietaryBlock {
+    grid-column: auto;
+  }
+
+  .foodDeliveryProducts.cardsProduct {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 28px;
+  }
+}

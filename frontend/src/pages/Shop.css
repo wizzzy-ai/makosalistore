@@ -1,0 +1,316 @@
+.shoppage {
+  position: relative;
+  top: 70px;
+  min-height: 100vh;
+  padding: 34px 5vw 72px;
+  color: #050505;
+  background: #ffffff;
+}
+
+.shoppage .Cgfilter.shopHeroPanel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: end;
+  margin: 0 0 24px;
+  padding: 34px;
+  border: 1px solid #101010;
+  border-radius: 0;
+  background:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.045) 0%, rgba(0, 0, 0, 0) 42%),
+    #ffffff;
+  box-shadow: none;
+}
+
+.shopHeroContent {
+  max-width: 760px;
+}
+
+.shopEyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 5px 9px;
+  border: 1px solid #101010;
+  color: #ffffff;
+  background: #050505;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.shoppage .Cgfilter h1 {
+  margin: 0;
+  color: #050505;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.05;
+  text-align: left;
+  letter-spacing: 0;
+}
+
+.shopHeroContent p {
+  max-width: 590px;
+  margin: 12px 0 0;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.shoppage .filtersbtn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  gap: 12px;
+  margin: 0;
+}
+
+.shoppage .filterbtn,
+.shoppage .searchbtn {
+  min-width: 126px;
+  height: 46px;
+  padding: 0 18px;
+  border: 1px solid #050505;
+  border-radius: 0;
+  color: #050505;
+  background: #ffffff;
+  box-shadow: 4px 4px 0 #050505;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.shoppage .filterbtn:hover,
+.shoppage .searchbtn:hover,
+.shoppage .filterbtn.activebtn,
+.shoppage .searchbtn.activebtn {
+  color: #ffffff;
+  background: #050505;
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0 #bcbcbc;
+}
+
+.shoppage .filters {
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  margin-top: 8px;
+  padding: 22px 0 0;
+  border-top: 1px solid #101010;
+}
+
+.shoppage .filters ul {
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.shoppage .filters .lined {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 9px 13px;
+  border: 1px solid #101010;
+  color: #050505;
+  background: #ffffff;
+  opacity: 1;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.shoppage .filters .lined::after,
+.shoppage .filterarea .lined::after {
+  display: none;
+}
+
+.shoppage .filters .lined:hover {
+  color: #ffffff;
+  background: #050505;
+  transform: translateY(-1px);
+}
+
+.shoppage .Searcharea {
+  height: auto;
+  margin: 0 0 24px;
+  padding: 20px;
+  border: 1px solid #101010;
+  background: #ffffff;
+}
+
+.shoppage .filterarea {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  margin: 0;
+  border: 1px solid #101010;
+  border-radius: 0;
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.shoppage .filter.filter {
+  padding: 22px;
+  margin-bottom: 28px;
+}
+
+.shoppage .filterarea h1 {
+  margin: 0 0 14px;
+  color: #050505;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.shoppage .filterarea ul {
+  gap: 10px;
+  padding: 0;
+}
+
+.shoppage .filterarea .lined {
+  display: block;
+  padding: 11px 13px;
+  border: 1px solid #101010;
+  border-radius: 0;
+  color: #050505;
+  background: #ffffff;
+  opacity: 1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.shoppage .filterarea .lined:hover {
+  color: #ffffff;
+  background: #050505;
+  box-shadow: none;
+}
+
+.shoppage .pricediv,
+.shoppage .sortbydiv,
+.shoppage .attribute-filters {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #101010;
+  background: #ffffff;
+}
+
+.shoppage .attribute-filters {
+  grid-column: 1 / -1;
+}
+
+.shopProductsGrid.cardsProduct {
+  width: 100%;
+  margin: 0;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  justify-content: center;
+  gap: 34px;
+}
+
+.shoppage .cardProduct {
+  border-radius: 0;
+  border-color: #111111;
+  box-shadow: 8px 8px 0 #050505;
+}
+
+.shoppage .cardProduct:hover {
+  transform: translate(-3px, -7px);
+  box-shadow: 12px 12px 0 #050505;
+}
+
+.shoppage .imgDiv {
+  border-radius: 0;
+  border-bottom: 1px solid #111111;
+}
+
+.shoppage .QuickView {
+  border-radius: 0;
+  border: 1px solid #ffffff;
+  box-shadow: none;
+}
+
+.shoppage .iconFavButton {
+  border-color: #111111;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 #050505;
+}
+
+.shopLoading,
+.shopEmptyState {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  border: 1px solid #101010;
+  background: #ffffff;
+  color: #050505;
+  text-align: center;
+}
+
+.shopEmptyState h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.shopEmptyState p {
+  margin: 0;
+  color: #555555;
+  font-size: 14px;
+}
+
+@media (max-width: 950px) {
+  .shoppage .Cgfilter.shopHeroPanel {
+    grid-template-columns: 1fr;
+    padding: 26px;
+  }
+
+  .shoppage .filtersbtn {
+    justify-content: flex-start;
+  }
+
+  .shoppage .filterarea {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .shoppage {
+    padding: 24px 16px 56px;
+  }
+
+  .shoppage .Cgfilter.shopHeroPanel {
+    padding: 22px;
+  }
+
+  .shoppage .Cgfilter h1 {
+    font-size: 34px;
+  }
+
+  .shopHeroContent p {
+    font-size: 14px;
+  }
+
+  .shoppage .filtersbtn {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .shoppage .filterbtn,
+  .shoppage .searchbtn {
+    width: 100%;
+    max-width: none;
+  }
+
+  .shoppage .filters ul {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .shoppage .filters .lined {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .shopProductsGrid.cardsProduct {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 28px;
+  }
+}

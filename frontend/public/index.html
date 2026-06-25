@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script>
+      // Some dependencies reference `process` or `process.env` in the browser.
+      ;(function (global) {
+        if (typeof global.process === 'undefined') {
+          global.process = { env: { NODE_ENV: 'development' } };
+        } else if (typeof global.process.env === 'undefined') {
+          global.process.env = { NODE_ENV: 'development' };
+        }
+      })(typeof globalThis !== 'undefined' ? globalThis : window);
+    </script>
+    <!-- Font Awesome (free CSS) - avoids blocked kit script -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- LottieFiles Web Player (custom element: <lottie-player/>) -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <title>East Clothing</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="portal"></div>
+
+  </body>
+</html>

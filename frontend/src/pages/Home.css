@@ -1,0 +1,325 @@
+.homepage {
+  position: relative;
+  top: 70px;
+  min-height: 100vh;
+  padding-bottom: 72px;
+  color: #050505;
+  background: #ffffff;
+}
+
+.homepage .slider {
+  height: min(680px, calc(100vh - 70px));
+  min-height: 540px;
+  border-bottom: 1px solid #101010;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.homepage .slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 96px 8vw;
+  color: #050505;
+  pointer-events: none;
+  transition: opacity 900ms cubic-bezier(0.22, 1, 0.36, 1), transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scale(1.015);
+}
+
+.homepage .slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(255, 255, 255, 0.18) 100%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 38%);
+}
+
+.homepage .slide.current {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.homepage .slide .titleslider,
+.homepage .slide .subtitleslider,
+.homepage .slide .content {
+  position: relative;
+  z-index: 2;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.homepage .slide .titleslider {
+  max-width: 760px;
+  margin: 0;
+  color: #050505;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.homepage .slide .subtitleslider {
+  max-width: 520px;
+  margin: 0;
+  color: #2d2d2d;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.homepage .slide.current .titleslider,
+.homepage .slide.current .subtitleslider,
+.homepage .slide.current .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.homepage .slide.current .titleslider {
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1) 160ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) 160ms;
+}
+
+.homepage .slide.current .subtitleslider {
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1) 260ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) 260ms;
+}
+
+.homepage .slide.current .content {
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1) 360ms, transform 700ms cubic-bezier(0.22, 1, 0.36, 1) 360ms;
+}
+
+.homepage .ShopNow {
+  width: auto;
+  min-width: 178px;
+  border: 1px solid #050505;
+  border-radius: 0;
+  padding: 13px 22px;
+  color: #ffffff;
+  background: #050505;
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: 6px 6px 0 #bcbcbc;
+}
+
+.homepage .ShopNow:hover {
+  color: #050505;
+  background: #ffffff;
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 #050505;
+}
+
+.homepage .next,
+.homepage .prev {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #050505;
+  color: #050505;
+  background: #ffffff;
+  opacity: 1;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.homepage .next:hover,
+.homepage .prev:hover {
+  color: #ffffff;
+  background: #050505;
+  transform: translateY(-2px);
+}
+
+.homeCategorySection {
+  padding: 54px 5vw 34px;
+}
+
+.homeSectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.homeEyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 8px;
+  padding: 5px 9px;
+  border: 1px solid #101010;
+  color: #ffffff;
+  background: #050505;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.homeSectionHeader h2 {
+  margin: 0;
+  color: #050505;
+  font-size: 36px;
+  font-weight: 850;
+  line-height: 1.05;
+}
+
+.homepage .cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin: 0;
+}
+
+.homepage .cardscg {
+  min-height: 280px;
+  height: auto;
+  border: 1px solid #101010;
+  box-shadow: 8px 8px 0 #050505;
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.homepage .cardscg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Lighter overlay so category images don't look washed out */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 1;
+}
+
+.homepage .cardscg::after {
+  top: 0;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.homepage .cardscg h1,
+.homepage .ShopNowcg {
+  position: relative;
+  z-index: 2;
+}
+
+.homepage .cardscg h1 {
+  max-width: 230px;
+  margin: 20px;
+  color: #050505;
+  font-size: 25px;
+  font-weight: 850;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.homepage .ShopNowcg {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  opacity: 1;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin: auto 0 24px 20px;
+  padding: 10px 13px;
+  border: 1px solid #050505;
+  color: #050505;
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.homepage .ShopNowcg::after {
+  display: none;
+}
+
+.homepage .cardscg:hover {
+  transform: translate(-3px, -7px);
+  box-shadow: 12px 12px 0 #050505;
+}
+
+.homepage .cardscg:hover .ShopNowcg {
+  position: relative;
+  transform: none;
+}
+
+.homepage .cardscg:hover h1,
+.homepage .cardscg:hover .ShopNowcg {
+  color: #ffffff;
+}
+
+.homepage .cardscg:hover .ShopNowcg {
+  border-color: #ffffff;
+  background: #050505;
+}
+
+.homepage .Cgfilter.shopHeroPanel {
+  margin: 36px 5vw 24px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.homepage .shopProductsGrid.cardsProduct {
+  padding: 0 5vw;
+}
+
+@media (max-width: 1100px) {
+  .homepage .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .homepage .slider {
+    min-height: 500px;
+  }
+
+  .homepage .slide {
+    padding: 78px 22px;
+  }
+
+  .homepage .slide .titleslider {
+    font-size: 44px;
+  }
+
+  .homepage .slide .subtitleslider {
+    font-size: 17px;
+  }
+
+  .homepage .next,
+  .homepage .prev {
+    width: 40px;
+    height: 40px;
+  }
+
+  .homeCategorySection {
+    padding: 38px 16px 26px;
+  }
+
+  .homeSectionHeader h2 {
+    font-size: 30px;
+  }
+
+  .homepage .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .homepage .cardscg {
+    min-height: 230px;
+  }
+
+  .homepage .Cgfilter.shopHeroPanel {
+    margin: 28px 16px 22px;
+  }
+
+  .homepage .shopProductsGrid.cardsProduct {
+    padding: 0 16px;
+  }
+}

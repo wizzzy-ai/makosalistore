@@ -1,0 +1,328 @@
+.placeorder-page {
+  margin: 92px 0 32px;
+  padding: 0 24px;
+  min-height: calc(100vh - 124px);
+  background:
+    radial-gradient(900px 500px at 18% -10%, rgba(17, 24, 39, 0.06), transparent 60%),
+    radial-gradient(700px 420px at 92% 0%, rgba(37, 99, 235, 0.08), transparent 55%),
+    #f7f8fb;
+}
+
+.placeorder__layout {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 18px;
+}
+
+.placeorder__main {
+  display: grid;
+  gap: 14px;
+}
+
+.placeorder__card,
+.cart-summ {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.placeorder__cardhead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.placeorder__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #0b0b0b;
+  letter-spacing: -0.01em;
+}
+
+.placeorder__muted {
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.65);
+  font-weight: 700;
+}
+
+.placeorder__rows {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.placeorder__row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.placeorder__label {
+  font-size: 11px;
+  color: rgba(15, 23, 42, 0.62);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+}
+
+.placeorder__value {
+  font-size: 14px;
+  color: rgba(15, 23, 42, 0.9);
+  line-height: 1.4;
+  font-weight: 650;
+}
+
+.placeorder__pill {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(15, 23, 42, 0.04);
+  text-transform: capitalize;
+}
+
+.placeorder__hint {
+  font-size: 12px;
+  color: rgba(15, 23, 42, 0.7);
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px dashed rgba(15, 23, 42, 0.14);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.orders-placeorder {
+  display: grid;
+  gap: 10px;
+}
+
+.placeorder__item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.placeorder__itemname {
+  min-width: 0;
+}
+
+.placeorder__link {
+  color: #0b0b0b;
+  text-decoration: none;
+  font-weight: 800;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.placeorder__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.placeorder__itemcalc {
+  font-size: 13px;
+  color: rgba(15, 23, 42, 0.64);
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.placeorder__itemtotal {
+  font-size: 14px;
+  font-weight: 950;
+  white-space: nowrap;
+  color: #0b0b0b;
+}
+
+.placeorder__empty {
+  padding: 14px 12px;
+  border-radius: 14px;
+  border: 1px dashed rgba(15, 23, 42, 0.18);
+  color: rgba(15, 23, 42, 0.7);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.placeorder__summary {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+}
+
+.placeorder__summarytitle {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 950;
+  color: #0b0b0b;
+}
+
+.calculs-placeorder {
+  display: grid;
+  gap: 10px;
+}
+
+.placeorder__sumrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: rgba(15, 23, 42, 0.9);
+  font-weight: 750;
+}
+
+.placeorder__sumrow span:last-child {
+  font-weight: 900;
+}
+
+.placeorder__divider {
+  height: 1px;
+  background: rgba(15, 23, 42, 0.12);
+  margin: 2px 0;
+}
+
+.placeorder__sumrow--total {
+  font-size: 16px;
+  font-weight: 1000;
+  color: #0b0b0b;
+}
+
+.placeorder__error {
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  background: rgba(220, 38, 38, 0.06);
+  color: #7f1d1d;
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.div-placeorder-btn {
+  margin-top: 6px;
+}
+
+.placeorder-btn {
+  width: 100%;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: linear-gradient(135deg, #111827, #334155);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18);
+}
+
+.placeorder-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.22);
+}
+
+.placeorder-btn:active {
+  transform: translateY(0);
+  opacity: 0.95;
+}
+
+.placeorder-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 960px) {
+  .placeorder-page {
+    padding: 0 16px;
+  }
+
+  .placeorder__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .placeorder__summary {
+    position: static;
+  }
+
+  .placeorder__row {
+    grid-template-columns: 1fr;
+  }
+
+  .placeorder__item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .placeorder__itemcalc,
+  .placeorder__itemtotal {
+    justify-self: start;
+  }
+}
+
+.order-confirmed {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  cursor: progress;
+}
+
+.order-confirmed--dismissable {
+  cursor: pointer;
+}
+
+.order-confirmed__panel {
+  width: min(520px, 100%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  padding: 18px 18px 16px;
+  text-align: center;
+  cursor: default;
+}
+
+.order-confirmed__panel lottie-player {
+  width: 260px;
+  height: 260px;
+  margin: 0 auto;
+}
+
+.order-confirmed__title {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 1000;
+  color: #0b0b0b;
+}
+
+.order-confirmed__sub {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(15, 23, 42, 0.7);
+  font-weight: 700;
+}
