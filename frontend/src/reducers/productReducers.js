@@ -27,7 +27,11 @@ export const productListReducer = (state={products: [] },action) => {
         case PRODUCT_LIST_REQUEST :
             return {loading : true, products : []}
         case PRODUCT_LIST_SUCCESS :
-            return {loading : false , products: action.payload}
+            return {
+                loading : false,
+                products: Array.isArray(action.payload) ? action.payload : [],
+                error: Array.isArray(action.payload) ? undefined : 'Products could not be loaded. Please check the API connection.',
+            }
         case PRODUCT_LIST_FAIL :
             return {loading : false , error : action.payload}
         default :
@@ -40,7 +44,16 @@ export const productDetailsReducer = (
         case PRODUCT_DETAILS_REQUEST :
             return {loading : true, ...state}
         case PRODUCT_DETAILS_SUCCESS :
-            return {loading : false , product: action.payload}
+            return {
+                loading : false,
+                product: {
+                    reviews: [],
+                    images: [],
+                    category: [],
+                    sizes: [],
+                    ...(action.payload && typeof action.payload === 'object' ? action.payload : {}),
+                },
+            }
         case PRODUCT_DETAILS_FAIL :
             return {loading : false , error : action.payload}
         default :
