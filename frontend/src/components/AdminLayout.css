@@ -940,6 +940,11 @@ tbody tr:hover {
     stroke: #000000;
   }
 
+  .admin-mobile-menu * {
+    color: #000000 !important;
+    stroke: #000000 !important;
+  }
+
   .admin-sidebar-overlay {
     position: fixed;
     inset: 0;

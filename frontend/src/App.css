@@ -672,6 +672,19 @@ input[type="checkbox"]:active {
   margin: 6px;
   transition: all 0.3s ease;
 }
+
+.nav .burger,
+.nav .burger.toggle {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.16) !important;
+}
+
+.nav .burger div,
+.nav .burger.toggle div {
+  background: #000000 !important;
+  border-color: #000000 !important;
+  opacity: 1;
+}
 /*slider*/
 
 .slider {
