@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import {
@@ -7,9 +7,11 @@ import {
   FiBox,
   FiGrid,
   FiLogOut,
+  FiMenu,
   FiSearch,
   FiSettings,
   FiShoppingCart,
+  FiX,
   FiUsers
 } from 'react-icons/fi';
 import './AdminLayout.css';
@@ -20,6 +22,11 @@ const AdminLayout = ({ children }) => {
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
   const adminLogoLottieSrc = process.env.REACT_APP_ADMIN_LOGO_LOTTIE_SRC;
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [location.pathname]);
 
   const navItems = [
     { path: '/admin', exact: true, icon: FiGrid, label: 'Dashboard' },
@@ -64,7 +71,24 @@ const AdminLayout = ({ children }) => {
   })();
 
   return (
-    <div className="admin-layout">
+    <div className={`admin-layout ${sidebarOpen ? 'sidebar-open' : ''}`}>
+      <button
+        className="admin-mobile-menu"
+        type="button"
+        aria-label={sidebarOpen ? 'Close admin menu' : 'Open admin menu'}
+        aria-expanded={sidebarOpen}
+        onClick={() => setSidebarOpen((open) => !open)}
+      >
+        {sidebarOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+      </button>
+
+      <button
+        className="admin-sidebar-overlay"
+        type="button"
+        aria-label="Close admin menu"
+        onClick={() => setSidebarOpen(false)}
+      />
+
       <aside className="admin-sidebar">
         <div className="sidebar-header">
           <div className="logo-container">
