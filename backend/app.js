@@ -18,10 +18,43 @@ const requestIdMiddleware = (req, res, next) => {
   next()
 }
 
+const allowedOrigins = [
+  'https://makosalistore.vercel.app',
+  process.env.FRONTEND_URL,
+].filter(Boolean)
+
+const corsMiddleware = (req, res, next) => {
+  const origin = req.header('origin')
+  const isVercelPreview = (() => {
+    try {
+      return origin ? /\.vercel\.app$/.test(new URL(origin).hostname) : false
+    } catch {
+      return false
+    }
+  })()
+
+  if (!origin || allowedOrigins.includes(origin) || isVercelPreview) {
+    if (origin) {
+      res.setHeader('Access-Control-Allow-Origin', origin)
+      res.setHeader('Vary', 'Origin')
+    }
+  }
+
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS')
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization,X-Requested-With')
+
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(204)
+  }
+
+  return next()
+}
+
 const createApp = () => {
   const app = express()
 
   app.use(requestIdMiddleware)
+  app.use(corsMiddleware)
 
   const isDev = process.env.NODE_ENV === 'development'
   const isTest = process.env.NODE_ENV === 'test'
@@ -72,4 +105,3 @@ const createApp = () => {
 }
 
 export default createApp
-
