@@ -685,6 +685,15 @@ input[type="checkbox"]:active {
   border-color: #000000 !important;
   opacity: 1;
 }
+
+.nav .burger .burger-icon,
+.nav .burger.toggle .burger-icon {
+  display: block;
+  color: #000000 !important;
+  stroke: #000000 !important;
+  fill: none !important;
+  opacity: 1 !important;
+}
 /*slider*/
 
 .slider {

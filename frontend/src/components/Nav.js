@@ -8,6 +8,7 @@ import { BsArrowRightShort } from 'react-icons/bs';
 import { IoLogOutOutline } from 'react-icons/io5';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { CgProfile } from 'react-icons/cg';
+import { FiMenu, FiX } from 'react-icons/fi';
 import ConfirmationModal from './ConfirmationModal'
 
 import { logout } from '../actions/userActions'
@@ -271,9 +272,11 @@ const Nav = ({ history }) => {
                 aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMobileMenuOpen}
             >
-                <div className='line1'></div>
-                <div className='line2'></div>
-                <div className='line3'></div>
+                {isMobileMenuOpen ? (
+                    <FiX className="burger-icon" size={26} aria-hidden="true" />
+                ) : (
+                    <FiMenu className="burger-icon" size={26} aria-hidden="true" />
+                )}
             </button>
             
             <div className={`rightComp ${isMobileMenuOpen ? 'burgerActive' : ''}`}>
